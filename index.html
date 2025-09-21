@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Top Navigation -->
+  <nav class="navbar">
+    <div class="logo">MyDashboard</div>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Analytics</a></li>
+      <li><a href="#">Settings</a></li>
+      <li><a href="#">Profile</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to Your Dashboard</h1>
+    <p>Manage your data and insights efficiently.</p>
+  </section>
+
+  <!-- Main Content -->
+  <div class="main-container">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <ul>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Reports</a></li>
+        <li><a href="#">Users</a></li>
+        <li><a href="#">Settings</a></li>
+      </ul>
+    </aside>
+
+    <!-- Content Section -->
+    <section class="content">
+      <h2>Overview</h2>
+
+      <!-- Cards Section -->
+      <div class="cards">
+        <div class="card">Users <span>1,024</span></div>
+        <div class="card">Revenue <span>$12,340</span></div>
+        <div class="card">Orders <span>245</span></div>
+        <div class="card">Feedback <span>56</span></div>
+      </div>
+
+      <!-- Additional Content -->
+      <div class="extra-content">
+        <div class="box" style="flex-grow: 2;">Main Chart</div>
+        <div class="box" style="flex-grow: 1;">Secondary Info</div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-column">
+      <h4>Company</h4>
+      <ul>
+        <li>About</li>
+        <li>Team</li>
+        <li>Careers</li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Support</h4>
+      <ul>
+        <li>Help Center</li>
+        <li>Contact</li>
+        <li>FAQ</li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Legal</h4>
+      <ul>
+        <li>Privacy Policy</li>
+        <li>Terms of Service</li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    // Toggle sidebar for mobile
+    const hamburger = document.getElementById('hamburger');
+    const sidebar = document.getElementById('sidebar');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      sidebar.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
